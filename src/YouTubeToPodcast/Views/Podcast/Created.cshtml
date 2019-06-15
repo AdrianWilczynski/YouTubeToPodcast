@@ -1,0 +1,17 @@
+@model string
+@{
+    ViewData["Title"] = "Your Podcast";
+}
+
+<div class="text-center my-5">
+    <a href="@Model" class="font-weight-bold url">@Model</a>
+</div>
+
+<button id="copyButton" class="btn btn-primary d-block m-auto">
+    Copy to Clipboard
+</button>
+<input hidden id="copyTarget" value="@Model" />
+
+@section Scripts {
+    <script src="~/js/copyToClipboard.js"></script>
+}

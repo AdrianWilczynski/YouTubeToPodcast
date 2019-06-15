@@ -1,0 +1,8 @@
+@model int?
+@{
+    ViewData["Title"] = "Whoops...";
+}
+
+<h2 class="text-center text-danger">
+    @(Model == 404 ? "Page Not Found 🤨" : "Something Went Wrong 😅")
+</h2>

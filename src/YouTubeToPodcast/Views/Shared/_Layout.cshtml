@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - YouTube To Podcast</title>
+    <link href="~/lib/bootswatch/minty/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light fixed-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="/">YouTube to Podcast</a>
+        </div>
+    </nav>
+
+     <div class="container py-5">
+         <main class="jumbotron">
+             <h1 class="text-center">@ViewData["Title"]</h1>
+             @RenderBody()
+         </main>
+     </div>
+
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+﻿@model NewPodcastDTO
+
+@{
+    ViewData["Title"] = "New Podcast";
+}
+
+<form class="p-2 clearfix" method="POST">
+    <div class="form-group mt-5">
+        <label asp-for="Url"></label>
+        <input asp-for="Url" class="form-control" />
+        <span asp-validation-for="Url" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Contains"></label>
+        <input asp-for="Contains" class="form-control" />
+        <span asp-validation-for="Contains" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Duration"></label>
+        <select asp-for="Duration" asp-items="@NewPodcastDTO.Durations" class="form-control"></select>
+        <span asp-validation-for="Duration" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary float-right">Convert</button>
+</form>

@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "bootswatch@4.3.1",
+      "destination": "wwwroot\\lib\\bootswatch",
+      "files": [
+        "minty/bootstrap.min.css",
+        "minty/bootstrap.css"
+      ]
+    }
+  ]
+}

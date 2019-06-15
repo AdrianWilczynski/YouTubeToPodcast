@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <LangVersion>latest</LangVersion>
+    <UserSecretsId>032c8433-5e86-4add-b54b-af306242785f</UserSecretsId>
+    <CodeAnalysisRuleSet>../../global.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Apis.YouTube.v3" Version="1.40.2.1593" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.4" />
+    <PackageReference Include="morelinq" Version="3.1.1" />
+    <PackageReference Include="YoutubeExplode" Version="4.7.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="./database.db" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
