@@ -35,7 +35,7 @@ namespace YouTubeToPodcast.DTOs
                 {
                     ImageUrl = channel.ImageUrl
                 },
-                Items = videos.Select(v => new ItemDto
+                Items = videos.Select(v => new ItemDTO
                 {
                     Title = v.Title,
                     Guid = v.Url,
@@ -45,7 +45,7 @@ namespace YouTubeToPodcast.DTOs
                     Author = channel.Title,
                     Duration = v.Duration?.ToString(),
                     PublicationDate = v.PublicationDate?.ToString("r"),
-                    Enclosure = new EnclosureDto
+                    Enclosure = new EnclosureDTO
                     {
                         Url = fileUrlFactory(v.Id),
                         Type = Constants.YouTube.AudioMimeType
@@ -84,7 +84,7 @@ namespace YouTubeToPodcast.DTOs
             public ImageDTO Image { get; set; }
 
             [XmlElement("item")]
-            public ItemDto[] Items { get; set; }
+            public ItemDTO[] Items { get; set; }
         }
 
         public class ImageDTO
@@ -93,7 +93,7 @@ namespace YouTubeToPodcast.DTOs
             public string ImageUrl { get; set; }
         }
 
-        public class ItemDto
+        public class ItemDTO
         {
             [XmlElement("title")]
             public string Title { get; set; }
@@ -120,10 +120,10 @@ namespace YouTubeToPodcast.DTOs
             public string PublicationDate { get; set; }
 
             [XmlElement("enclosure")]
-            public EnclosureDto Enclosure { get; set; }
+            public EnclosureDTO Enclosure { get; set; }
         }
 
-        public class EnclosureDto
+        public class EnclosureDTO
         {
             [XmlAttribute("url")]
             public string Url { get; set; }
