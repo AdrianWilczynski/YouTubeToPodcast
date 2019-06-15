@@ -39,7 +39,7 @@ namespace YouTubeToPodcast
             services.AddProgressiveWebApp(new PwaOptions
             {
                 Strategy = ServiceWorkerStrategy.CacheFingerprinted,
-                RoutesToPreCache = "/",
+                RoutesToPreCache = string.Join(",", "/", "/lib/bootswatch/minty/bootstrap.min.css", "/css/site.css"),
                 OfflineRoute = "/Offline"
             });
 
