@@ -4,7 +4,7 @@ namespace YouTubeToPodcast.Controllers
 {
     public class HomeController : Controller
     {
-        [Route("/Error/{statusCode?}")]
+        [Route("/[action]/{statusCode?}")]
         public IActionResult Error(int? statusCode) => View(model: statusCode);
     }
 }

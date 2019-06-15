@@ -45,7 +45,7 @@ namespace YouTubeToPodcast.Controllers
             return RedirectToAction(nameof(Created), new { podcast.Id });
         }
 
-        [Route("/YourPodcast/{id}")]
+        [Route("/[action]/{id}")]
         public IActionResult Created(string id)
         {
             var podcast = _podcastRepository.GetById(id);
@@ -61,7 +61,7 @@ namespace YouTubeToPodcast.Controllers
             return View(model: feedUrl);
         }
 
-        [Route("/Feed/{id}")]
+        [Route("/[action]/{id}")]
         [Produces(MediaTypeNames.Application.Xml)]
         [ResponseCache(Duration = Constants.Cache.MinutesTillExpiration * 60)]
         public async Task<ActionResult<FeedDTO>> Feed(string id)
@@ -81,7 +81,7 @@ namespace YouTubeToPodcast.Controllers
             });
         }
 
-        [Route("/File/{id}")]
+        [Route("/[action]/{id}")]
         public async Task<IActionResult> File(string id)
         {
             id = id.RemoveSuffix(Constants.YouTube.AudioFileExtension);
