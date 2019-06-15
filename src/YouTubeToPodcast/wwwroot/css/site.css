@@ -1,3 +1,7 @@
+html {
+    min-width: 300px;
+}
+
 body {
     background: linear-gradient(to right, #fec6c3 50%, #b3dad7 50%);
 }
