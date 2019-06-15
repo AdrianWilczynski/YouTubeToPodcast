@@ -43,7 +43,7 @@ namespace YouTubeToPodcast.DTOs
                     Description = v.Description,
                     Summary = v.Description,
                     Author = channel.Title,
-                    Duration = v.Duration,
+                    Duration = v.Duration?.ToString(),
                     PublicationDate = v.PublicationDate?.ToString("r"),
                     Enclosure = new EnclosureDto
                     {
@@ -114,7 +114,7 @@ namespace YouTubeToPodcast.DTOs
             public string Author { get; set; }
 
             [XmlElement("duration", Namespace = ITunesNamespace)]
-            public TimeSpan? Duration { get; set; }
+            public string Duration { get; set; }
 
             [XmlElement("pubDate")]
             public string PublicationDate { get; set; }
