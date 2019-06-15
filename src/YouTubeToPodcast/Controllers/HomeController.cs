@@ -6,5 +6,8 @@ namespace YouTubeToPodcast.Controllers
     {
         [Route("/[action]/{statusCode?}")]
         public IActionResult Error(int? statusCode) => View(model: statusCode);
+
+        [Route("/[action]")]
+        public IActionResult Offline() => View();
     }
 }

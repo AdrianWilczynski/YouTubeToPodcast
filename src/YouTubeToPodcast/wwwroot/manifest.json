@@ -1,0 +1,16 @@
+{
+    "name": "YouTube To Podcast",
+    "short_name": "YouTube To Podcast",
+    "icons": [
+        {
+            "src": "/img/icon192x192.png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/img/icon512x512.png",
+            "sizes": "512x512"
+        }
+    ],
+    "display": "standalone",
+    "start_url": "/"
+}

@@ -9,6 +9,7 @@ using YouTubeToPodcast.Services;
 using Google.Apis.YouTube.v3;
 using Google.Apis.Services;
 using YoutubeExplode;
+using WebEssentials.AspNetCore.Pwa;
 
 namespace YouTubeToPodcast
 {
@@ -32,6 +33,15 @@ namespace YouTubeToPodcast
 
             services.AddMemoryCache();
             services.AddResponseCaching();
+
+            services.AddHttpContextAccessor();
+
+            services.AddProgressiveWebApp(new PwaOptions
+            {
+                Strategy = ServiceWorkerStrategy.CacheFingerprinted,
+                RoutesToPreCache = "/",
+                OfflineRoute = "/Offline"
+            });
 
             var youTubeApiKey = Configuration["YouTubeApi:Key"];
             services.AddTransient(_ => new YouTubeService(new BaseClientService.Initializer { ApiKey = youTubeApiKey }));
