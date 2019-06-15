@@ -55,10 +55,10 @@ namespace YouTubeToPodcast.Controllers
                 return NotFound();
             }
 
-            var fileUrl = Url.Action(nameof(Feed), nameof(PodcastController).RemoveSuffix(nameof(Controller)),
+            var feedUrl = Url.Action(nameof(Feed), nameof(PodcastController).RemoveSuffix(nameof(Controller)),
                 new { podcast.Id }, Request.Scheme);
 
-            return View(model: fileUrl);
+            return View(model: feedUrl);
         }
 
         [Route("/Feed/{id}")]
