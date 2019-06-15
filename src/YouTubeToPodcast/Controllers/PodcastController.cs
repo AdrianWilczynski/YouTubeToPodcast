@@ -45,7 +45,7 @@ namespace YouTubeToPodcast.Controllers
             return RedirectToAction(nameof(Created), new { podcast.Id });
         }
 
-        [Route("/YouPodcast/{id}")]
+        [Route("/YourPodcast/{id}")]
         public IActionResult Created(string id)
         {
             var podcast = _podcastRepository.GetById(id);
