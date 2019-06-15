@@ -27,6 +27,7 @@ namespace YouTubeToPodcast.Controllers
         }
 
         [HttpGet]
+        [ResponseCache(Duration = Constants.Cache.MinutesTillExpiration * 60)]
         public IActionResult New() => View();
 
         [HttpPost]
