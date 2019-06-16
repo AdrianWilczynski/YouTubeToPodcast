@@ -17,10 +17,7 @@ namespace YouTubeToPodcast.Migrations
                     Contains = table.Column<string>(nullable: true),
                     Duration = table.Column<TimeSpan>(nullable: false)
                 },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Podcasts", x => x.Id);
-                });
+                constraints: table => table.PrimaryKey("PK_Podcasts", x => x.Id));
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
