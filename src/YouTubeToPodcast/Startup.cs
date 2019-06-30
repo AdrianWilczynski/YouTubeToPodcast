@@ -50,7 +50,7 @@ namespace YouTubeToPodcast
 
             services.AddScoped<IPodcastRepository, PodcastRepository>();
             services.AddTransient<IYouTubeApiClient, YouTubeApiClient>();
-            services.AddTransient<IYouTubeScrapper, YouTubeScrapper>();
+            services.AddTransient<IYouTubeScrapper, YouTubeExplodeScrapper>();
             services.AddTransient<IFeedGenerator, FeedGenerator>();
         }
 

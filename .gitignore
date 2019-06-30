@@ -355,3 +355,5 @@ MigrationBackup/
 !.vscode/extensions.json
 
 *.db
+
+youtube-dl

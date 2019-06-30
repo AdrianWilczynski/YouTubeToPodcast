@@ -5,11 +5,11 @@ using YoutubeExplode.Models.MediaStreams;
 
 namespace YouTubeToPodcast.Services
 {
-    public class YouTubeScrapper : IYouTubeScrapper
+    public class YouTubeExplodeScrapper : IYouTubeScrapper
     {
         private readonly IYoutubeClient _youtubeClient;
 
-        public YouTubeScrapper(IYoutubeClient youtubeClient)
+        public YouTubeExplodeScrapper(IYoutubeClient youtubeClient)
         {
             _youtubeClient = youtubeClient;
         }
