@@ -21,5 +21,6 @@
 
   <ItemGroup>
     <Content Include="./database.db" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="./youtube-dl" CopyToPublishDirectory="PreserveNewest" />
   </ItemGroup>
 </Project>
