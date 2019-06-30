@@ -33,11 +33,11 @@ namespace YouTubeToPodcast.Models
                 .Value;
 
         private ChannelType DetermineChannelType(string url)
-            => IsChannelTypeUrl(url, "user") ? ChannelType.User
-            : IsChannelTypeUrl(url, "channel") ? ChannelType.Channel
+            => IsUrlOfType(url, "user") ? ChannelType.User
+            : IsUrlOfType(url, "channel") ? ChannelType.Channel
             : throw new ArgumentException();
 
-        private bool IsChannelTypeUrl(string url, string type)
+        private bool IsUrlOfType(string url, string type)
             => Regex.IsMatch(url, $@"(https?:\/\/)?(www.)?(m.)?youtube.com\/{type}\/[^\/?\s]+.*");
     }
 }
