@@ -1,4 +1,4 @@
 {
-    "appService.defaultWebAppToDeploy": "/subscriptions/94dbe941-7c7e-4163-a81b-916f5d11e59e/resourceGroups/YouTubeToPodcast/providers/Microsoft.Web/sites/YouTubeToPodcast",
+    "appService.defaultWebAppToDeploy": "/subscriptions/e5417465-5856-4888-92c3-1b3be643edc8/resourceGroups/YouTubeToPodcast/providers/Microsoft.Web/sites/YouTubeToPodcast",
     "appService.deploySubpath": "src\\YouTubeToPodcast\\bin\\Release\\netcoreapp2.2\\publish"
 }
