@@ -2,9 +2,10 @@ namespace YouTubeToPodcast
 {
     public static class Constants
     {
-        public static class Cache
+        public static class CacheExpirationTimeInMinutes
         {
-            public const int MinutesTillExpiration = 60;
+            public const int Feed = 60;
+            public const int Url = 10;
         }
 
         public static class YouTube

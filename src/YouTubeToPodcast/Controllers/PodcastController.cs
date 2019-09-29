@@ -27,7 +27,6 @@ namespace YouTubeToPodcast.Controllers
         }
 
         [HttpGet]
-        [ResponseCache(Duration = Constants.Cache.MinutesTillExpiration * 60)]
         public IActionResult New() => View();
 
         [HttpPost]
@@ -64,7 +63,7 @@ namespace YouTubeToPodcast.Controllers
 
         [Route("/[action]/{id}")]
         [Produces(MediaTypeNames.Application.Xml)]
-        [ResponseCache(Duration = Constants.Cache.MinutesTillExpiration * 60)]
+        [ResponseCache(Duration = Constants.CacheExpirationTimeInMinutes.Feed * 60)]
         public async Task<ActionResult<FeedDTO>> Feed(string id)
         {
             var podcast = _podcastRepository.GetById(id);
@@ -76,7 +75,7 @@ namespace YouTubeToPodcast.Controllers
 
             return await _memoryCache.GetOrCreateAsync($"{nameof(Feed)}:{id}", async e =>
             {
-                e.AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(Constants.Cache.MinutesTillExpiration);
+                e.AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(Constants.CacheExpirationTimeInMinutes.Feed);
 
                 return await _feedGenerator.CreateFeedAsync(podcast, Request.Scheme, Request.Host);
             });
@@ -89,7 +88,7 @@ namespace YouTubeToPodcast.Controllers
 
             var url = await _memoryCache.GetOrCreateAsync($"{nameof(File)}:{id}", async e =>
             {
-                e.AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(Constants.Cache.MinutesTillExpiration);
+                e.AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(Constants.CacheExpirationTimeInMinutes.Url);
 
                 return await _youTubeScrapper.GetAudioFileUrl(id);
             });
