@@ -28,7 +28,7 @@ namespace YouTubeToPodcast.Models
             => WebEncoders.Base64UrlEncode(Guid.NewGuid().ToByteArray());
 
         private string ExtractYouTubeId(string url)
-            => Regex.Match(url, @"(https?:\/\/)?(www.)?(m.)?youtube.com\/(channel|user)\/(?<identifier>[^\/?\s]+).*")
+            => Regex.Match(url, @"(https?:\/\/)?(www\.)?(m\.)?youtube\.com\/(channel|user)\/(?<identifier>[^\/?\s]+).*")
                 .Groups["identifier"]
                 .Value;
 
@@ -38,6 +38,6 @@ namespace YouTubeToPodcast.Models
             : throw new ArgumentException();
 
         private bool IsUrlOfType(string url, string type)
-            => Regex.IsMatch(url, $@"(https?:\/\/)?(www.)?(m.)?youtube.com\/{type}\/[^\/?\s]+.*");
+            => Regex.IsMatch(url, $@"(https?:\/\/)?(www\.)?(m\.)?youtube\.com\/{type}\/[^\/?\s]+.*");
     }
 }

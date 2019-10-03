@@ -7,7 +7,7 @@ namespace YouTubeToPodcast.DTOs
     public class NewPodcastDTO
     {
         [Required]
-        [RegularExpression(@"(https?:\/\/)?(www.)?(m.)?youtube.com\/(channel|user)\/[^\/?\s]+.*", ErrorMessage = "Enter a valid channel or user url.")]
+        [RegularExpression(@"(https?:\/\/)?(www\.)?(m\.)?youtube\.com\/(channel|user)\/[^\/?\s]+.*", ErrorMessage = "Enter a valid channel or user url.")]
         [Display(Prompt = "https://www.youtube.com/channel/id")]
         public string Url { get; set; }
 
