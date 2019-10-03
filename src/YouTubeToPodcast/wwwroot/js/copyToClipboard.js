@@ -8,6 +8,7 @@ document.getElementById('copyButton')
 
             copyTarget.select();
             document.execCommand('copy');
+            copyTarget.blur();
 
             copyTarget.hidden = true;
         }
