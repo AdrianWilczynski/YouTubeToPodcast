@@ -1,16 +1,20 @@
 {
     "name": "YouTube To Podcast",
-    "short_name": "YouTube To Podcast",
+    "short_name": "YT 2 Podcast",
+    "description": "Convert YouTube channels into podcast RSS feeds.",
     "icons": [
         {
-            "src": "/img/icon192x192.png",
-            "sizes": "192x192"
+            "src": "img/icon192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
         },
         {
-            "src": "/img/icon512x512.png",
-            "sizes": "512x512"
+            "src": "img/icon512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
         }
     ],
     "display": "standalone",
-    "start_url": "/"
+    "start_url": "/",
+    "background_color": "white"
 }
