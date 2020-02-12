@@ -4,11 +4,16 @@
   "libraries": [
     {
       "library": "bootswatch@4.3.1",
-      "destination": "wwwroot\\lib\\bootswatch",
+      "destination": "wwwroot/lib/bootswatch",
       "files": [
         "minty/bootstrap.min.css",
         "minty/bootstrap.css"
       ]
+    },
+    {
+      "provider": "filesystem",
+      "library": "https://yt-dl.org/downloads/2020.01.24/youtube-dl",
+      "destination": "./"
     }
   ]
 }
