@@ -1,7 +1,7 @@
 //@ts-check
 document.getElementById('copyButton')
     .addEventListener('click', function () {
-        var copyTarget = document.getElementById('copyTarget');
+        const copyTarget = document.getElementById('copyTarget');
 
         if (copyTarget instanceof HTMLInputElement) {
             copyTarget.hidden = false;
