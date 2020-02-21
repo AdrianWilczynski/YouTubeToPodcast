@@ -25,7 +25,7 @@ namespace YouTubeToPodcast.Services
                     options =>
                     {
                         options.ThrowOnError();
-                        options.Timeout(TimeSpan.FromMinutes(5));
+                        options.Timeout(TimeSpan.FromMinutes(3));
                     })
                 .Task)
                 .StandardOutput
