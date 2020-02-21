@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -13,7 +12,6 @@ using YouTubeToPodcast.Models;
 
 namespace YouTubeToPodcast.IntegrationTests
 {
-    [SuppressMessage("Microsoft.CodeAnalysis.Diagnostics", "IDE0067")]
     public class AppShould : IClassFixture<Factory>
     {
         private readonly Factory _factory;
