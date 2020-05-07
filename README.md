@@ -16,6 +16,7 @@ Convert YouTube channels into podcast RSS feeds.
 - RSS (XML) feed generation
 - Caching
 - Filtering by duration and title
+- Installable (PWA)
 
 ## Build
 
